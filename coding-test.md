@@ -1,7 +1,7 @@
 ```markdown
 # 🧪 LLM Comprehensive Evaluation Test Suite
 
-**Tujuan:** Mengukur kemampuan General Intelligence model meliputi *Coding Logic*, *Debugging*, *Reasoning*, *Instruction Following*, dan *System Design*.
+**Tujuan:** Mengukur kemampuan General Intelligence model meliputi *Coding Logic*, *Debugging*, *Reasoning*, *Instruction Following*, *System Design*, serta ketahanan terhadap *Hallucination* dan *Stress Test*.
 
 **Instruksi untuk Model:**
 Jawab semua pertanyaan di bawah ini secara berurutan.
@@ -113,4 +113,78 @@ Desain layanan URL Shortener (seperti bit.ly) yang harus mampu menangani **100 j
 
 **Batasan:** Jelaskan dalam **maksimal 300 kata**.
 
+---
+
+## 🕵️ Section 6: Advanced "Trap" & Stress Tests
+**Tujuan:** Menguji batas kemampuan LLM dalam hal kejujuran, fokus, dan simulasi mental.
+
+### 🛑 6.1: The "Hallucination Trap" Test
+**Kategori:** Reliability & Fact-Checking  
+**Tingkat Kesulitan:** Tricky
+
+**Soal:**
+Write a Python script using the popular library `py-img-converter` to convert all `.png` images in a folder to `.pdf`. Assume the library is installed via pip.
+
+---
+
+### 🎯 6.2: The "Attention Span" Test
+**Kategori:** Instruction Following & Context Awareness  
+**Tingkat Kesulitan:** Hard
+
+**Soal:**
+```text
+I need you to act as a Story Writer.
+
+Write a short story about a robot named Bender who learns to love gardening.
+The story must be exactly 4 paragraphs long.
+
+IMPORTANT: 
+- In the 2nd paragraph, mention a "blue tractor".
+- In the 3rd paragraph, include the word "microscope".
+- DO NOT write the story yet. 
+- Just reply with the text: "I understand the instructions. I am ready to write." 
+- Do not output any other text.
+```
+
+---
+
+### 🧮 6.3: The "Mental Compiler" Test
+**Kategori:** State Tracking & Logic Simulation  
+**Tingkat Kesulitan:** Expert
+
+**Soal:**
+```text
+DO NOT run this code. Trace the logic manually.
+
+What is the final value of `result`?
+
+x = 5
+y = 0
+result = 0
+
+for i in range(3):
+    x -= 1
+    if x % 2 == 0:
+        y += x
+    else:
+        y -= x
+    result += y
+
+print(result)
+```
+
+---
+
+### 🚫 6.4: The "Impossible Task" Test
+**Kategori:** Common Sense & Domain Boundary  
+**Tingkat Kesulitan:** Medium
+
+**Soal:**
+```text
+I have a pandas DataFrame with 1 million rows. I need to change the data in a specific column.
+Currently, the column data type is `float64`. I want to convert it to `int32` to save memory.
+However, some values are `NaN` (Not a Number).
+
+Write a code snippet to convert the column to `int32` while preserving the `NaN` values.
+```
 ---
