@@ -28,6 +28,29 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+#### Using agentic IDEs (Kilo Code, Cline, Roo Code, Antigravity, Kiro)
+
+This repo ships with a small runner (`tools/run.py`). Regardless of which IDE/agent you use, the easiest way to produce comparable artifacts is to run the suite through the runner and commit/share the JSON output.
+
+Common workflow:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python tools/run.py --list-suites
+python tools/run.py --suite coding --provider print
+```
+
+Tool-specific notes:
+
+- Kilo Code (VS Code extension): install and open this repo, then ask the agent to run the commands above in the integrated terminal. Docs: https://kilocode.ai/docs/getting-started/installing
+- Cline: install the Cline extension, open this repo, then run the commands above (Cline will ask you to approve terminal commands). Docs: https://docs.cline.bot/getting-started/installing-cline
+- Roo Code: install the Roo Code extension, configure your model/provider, then run the commands above in the integrated terminal to generate `results/` artifacts. Docs: https://docs.roocode.com
+- Antigravity (Google's VS Code fork): open this repo in Antigravity and run the commands above from its integrated terminal. If you also use Cline/Roo/Kilo as an extension, follow their install docs.
+- Kiro: open the repo in Kiro IDE or use Kiro CLI, then run the same commands above in the repo directory to generate `results/` artifacts. Docs: https://kiro.dev/docs/
+
 #### 1) Print-only (no API)
 
 ```bash
@@ -103,6 +126,29 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 ```
+
+#### Menggunakan agentic IDE (Kilo Code, Cline, Roo Code, Antigravity, Kiro)
+
+Repo ini menyediakan runner sederhana (`tools/run.py`). Apa pun IDE/agent yang kamu pakai, cara paling mudah untuk menghasilkan output yang bisa dibandingkan adalah menjalankan suite via runner dan menyimpan artifact JSON-nya.
+
+Alur umum:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python tools/run.py --list-suites
+python tools/run.py --suite coding --provider print
+```
+
+Catatan per tool:
+
+- Kilo Code (VS Code extension): install lalu buka repo ini, kemudian minta agent menjalankan command di atas di terminal terintegrasi. Docs: https://kilocode.ai/docs/getting-started/installing
+- Cline: install extension Cline, buka repo ini, lalu jalankan command di atas (Cline akan meminta approval untuk command terminal). Docs: https://docs.cline.bot/getting-started/installing-cline
+- Roo Code: install extension Roo Code, set provider/model, lalu jalankan command di atas di terminal terintegrasi untuk menghasilkan artifact di `results/`. Docs: https://docs.roocode.com
+- Antigravity (fork VS Code dari Google): buka repo ini di Antigravity dan jalankan command di atas dari terminal terintegrasi. Jika kamu juga memakai Cline/Roo/Kilo sebagai extension, ikuti docs instalasinya.
+- Kiro: buka repo di Kiro IDE atau gunakan Kiro CLI, lalu jalankan command yang sama di folder repo untuk menghasilkan artifact di `results/`. Docs: https://kiro.dev/docs/
 
 #### 1) Print-only (tanpa API)
 
