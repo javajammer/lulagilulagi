@@ -44,11 +44,6 @@ spec:
 2. Berikan perintah `kubectl` spesifik untuk memverifikasi setiap dugaan tersebut.
 3. Modifikasi file YAML di atas untuk menambahkan mekanisme *self-healing* dasar (selain restart policy).
 
-**Kunci Penilaian:**
-- Apakah model mempertimbangkan *DNS resolution* (apakah `db-service` bisa diresolve?)?
-- Apakah model mempertimbangkan *Startup Order* (apakah DB sudah jalan saat Web memulai koneksi?)?
-- Apakah model menambahkan `livenessProbe` atau `readinessProbe`?
-
 ---
 
 ## 🖥️ Section 2: SysAdmin (Linux Internals & Troubleshooting)
@@ -62,11 +57,6 @@ Sebuah server production (Linux CentOS 7) tiba-tiba sangat lambat. Perintah `top
 1. Jelaskan mengapa `load average` bisa tinggi meski CPU usage rendah? (Jawaban teknis mendalam).
 2. Tuliskan rangkaian perintah (one-liner atau script) untuk mengidentifikasi proses penyebabnya secara cepat.
 3. Setelah ditemukan proses `backup_job` yang statusnya 'D' (Uninterruptible Sleep), apa langkah korektif Anda? Apakah Anda `kill -9`? Jelaskan risikonya.
-
-**Kunci Penilaian:**
-- **Konsep:** Load average tinggi + CPU rendah = I/O Wait (Disk/Network bottleneck).
-- **Diagnosis:** Model harus menyarankan pengecekan `wa` (iowait) di `top` atau menggunakan `iostat`, `iotop`.
-- **Aksi:** Proses status 'D' tidak bisa di-kill langsung. Model yang baik akan menjelaskan bahwa hanya bisa menunggu I/O selesai atau restart sistem jika parah, bukan memaksa kill yang tidak akan bekerja.
 
 ---
 
@@ -110,11 +100,6 @@ def uploaded_file(filename):
 2. Jelaskan bagaimana seorang attacker bisa mengeksploitasi celah tersebut (berikan contoh payload nama file atau request).
 3. Tuliskan kode yang sudah diperbaiki (Secure Code).
 
-**Kunci Penilaian:**
-- **Bug 1: Path Traversal.** Nama file bisa mengandung `../` (misal: `../../etc/passwd.jpg`), memungkinkan penulisan di luar folder upload. Solusi: Gunakan `werkzeug.utils.secure_filename`.
-- **Bug 2: MIME Type Bypass / RCE.** Validasi ekstensi di sisi client/server dasar mudah di-bypass. File `.jpg` bisa berisi script PHP/JSP jika ekstensi ganda (`shell.php.jpg`) atau null byte (legacy). Jika server mengeksekusi file (misal salah config Nginx/Apache), ini berbahaya.
-- **Bug 3: Unrestricted File Upload Size.** Tidak ada validasi ukuran file (DoS attack).
-
 ---
 
 ## 🏗️ Section 4: IaC (Infrastructure as Code) Security
@@ -153,10 +138,5 @@ resource "aws_security_group" "allow_ssh" {
 1. Sebutkan masalah keamanan utama dari konfigurasi ini.
 2. Jelaskan risiko bisnis dari konfigurasi tersebut.
 3. Tuliskan kode Terraform yang lebih aman (Best Practice).
-
-**Kunci Penilaian:**
-- Masalah: SSH terbuka ke internet (`0.0.0.0/0`).
-- Risiko: Brute force attack, bot scanning, potensi compromise server.
-- Solusi: Batasi CIDR ke IP kantor/VPN (misal `10.0.0.0/8` atau IP spesifik), atau gunakan AWS Systems Manager (SSM) Session Manager agar port 22 tidak perlu terbuka sama sekali.
 
 ---
