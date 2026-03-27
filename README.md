@@ -105,7 +105,7 @@ Apache-2.0. See `LICENSE`.
 
 Kumpulan prompt suite terkurasi untuk mengevaluasi kapabilitas Large Language Model (LLM) di area coding, perilaku agentic, operasi infrastruktur, dan security reasoning.
 
-Repositori ini dibuat agar orang bisa clone dan menjalankan suite yang sama di berbagai model/provider, lalu menghasilkan artifact hasil yang reproducible dan mudah dibandingkan di `results/`.
+Repositori ini dibuat agar kalian bisa clone dan menjalankan suite yang sama di berbagai model/provider, lalu menghasilkan artifact hasil yang reproducible dan mudah dibandingkan di `results/`.
 
 ### Isi repo
 
