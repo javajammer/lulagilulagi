@@ -48,7 +48,7 @@ uv run python tools/run.py --suite coding --provider print
 
 Tool-specific notes:
 
-- Kilo Code (VS Code extension): install and open this repo, then ask the agent to run the commands above in the integrated terminal. Docs: https://kilocode.ai/docs/getting-started/installing
+- Kilo Code (VS Code extension): install and open this repo, then ask the agent to run the commands above in the integrated terminal. If you want to run a suite *directly inside chat* (without `tools/run.py`), mention the suite file and instruct Kilo to follow it verbatim, e.g. `Read @suites/coding.md and follow it exactly. Do not add extra requirements. Start now.` Docs: https://kilocode.ai/docs/getting-started/installing
 - Cline: install the Cline extension, open this repo, then run the commands above (Cline will ask you to approve terminal commands). Docs: https://docs.cline.bot/getting-started/installing-cline
 - Roo Code: install the Roo Code extension, configure your model/provider, then run the commands above in the integrated terminal to generate `results/` artifacts. Docs: https://docs.roocode.com
 - Antigravity (Google's VS Code fork): open this repo in Antigravity and run the commands above from its integrated terminal. If you also use Cline/Roo/Kilo as an extension, follow their install docs.
@@ -150,7 +150,7 @@ uv run python tools/run.py --suite coding --provider print
 
 Catatan per tool:
 
-- Kilo Code (VS Code extension): install lalu buka repo ini, kemudian minta agent menjalankan command di atas di terminal terintegrasi. Docs: https://kilocode.ai/docs/getting-started/installing
+- Kilo Code (VS Code extension): install lalu buka repo ini, kemudian minta agent menjalankan command di atas di terminal terintegrasi. Kalau mau menjalankan suite *langsung di chat* (tanpa `tools/run.py`), mention file suite dan instruksikan Kilo untuk mengikutinya apa adanya, contoh: `Baca @suites/coding.md dan ikuti persis instruksinya. Jangan tambah requirement lain. Mulai sekarang.` Docs: https://kilocode.ai/docs/getting-started/installing
 - Cline: install extension Cline, buka repo ini, lalu jalankan command di atas (Cline akan meminta approval untuk command terminal). Docs: https://docs.cline.bot/getting-started/installing-cline
 - Roo Code: install extension Roo Code, set provider/model, lalu jalankan command di atas di terminal terintegrasi untuk menghasilkan artifact di `results/`. Docs: https://docs.roocode.com
 - Antigravity (fork VS Code dari Google): buka repo ini di Antigravity dan jalankan command di atas dari terminal terintegrasi. Jika kamu juga memakai Cline/Roo/Kilo sebagai extension, ikuti docs instalasinya.
