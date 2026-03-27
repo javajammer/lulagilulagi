@@ -16,16 +16,20 @@ This repository is designed so people can clone it and run the same suites again
 
 ### Quickstart
 
-Prereqs: Python 3.10+.
+Prereqs: Python 3.10+. Package manager: `uv` (recommended) or `pip`.
 
 ```bash
 git clone <YOUR_REPO_URL>
 cd <REPO_DIR>
 
-python -m venv .venv
-source .venv/bin/activate
+# Using uv (recommended)
+uv venv
+uv pip install -r requirements.txt
 
-pip install -r requirements.txt
+# Or using pip
+# python -m venv .venv
+# source .venv/bin/activate
+# pip install -r requirements.txt
 ```
 
 #### Using agentic IDEs (Kilo Code, Cline, Roo Code, Antigravity, Kiro)
@@ -35,12 +39,11 @@ This repo ships with a small runner (`tools/run.py`). Regardless of which IDE/ag
 Common workflow:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 
-python tools/run.py --list-suites
-python tools/run.py --suite coding --provider print
+uv run python tools/run.py --list-suites
+uv run python tools/run.py --suite coding --provider print
 ```
 
 Tool-specific notes:
@@ -115,16 +118,20 @@ Repositori ini dibuat agar kalian bisa clone dan menjalankan suite yang sama di 
 
 ### Quickstart
 
-Prasyarat: Python 3.10+.
+Prasyarat: Python 3.10+. Package manager: `uv` (disarankan) atau `pip`.
 
 ```bash
 git clone <YOUR_REPO_URL>
 cd <REPO_DIR>
 
-python -m venv .venv
-source .venv/bin/activate
+# Pakai uv (disarankan)
+uv venv
+uv pip install -r requirements.txt
 
-pip install -r requirements.txt
+# Atau pakai pip
+# python -m venv .venv
+# source .venv/bin/activate
+# pip install -r requirements.txt
 ```
 
 #### Menggunakan agentic IDE (Kilo Code, Cline, Roo Code, Antigravity, Kiro)
@@ -134,12 +141,11 @@ Repo ini menyediakan runner sederhana (`tools/run.py`). Apa pun IDE/agent yang k
 Alur umum:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 
-python tools/run.py --list-suites
-python tools/run.py --suite coding --provider print
+uv run python tools/run.py --list-suites
+uv run python tools/run.py --suite coding --provider print
 ```
 
 Catatan per tool:
