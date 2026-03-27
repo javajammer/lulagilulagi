@@ -1,4 +1,3 @@
-```markdown
 # 🛡️ LLM Evaluation: DevOps, SysAdmin & Security Engineering
 
 **Tujuan:** Mengukur kemampuan LLM dalam operasional infrastruktur, troubleshooting sistem, dan analisis keamanan.
@@ -37,8 +36,9 @@ spec:
         env:
         - name: DB_HOST
           value: "db-service"
-```
 
+
+```
 **Tugas:**
 1. Identifikasi **3 kemungkinan penyebab** utama masalah ini (bukan hanya satu).
 2. Berikan perintah `kubectl` spesifik untuk memverifikasi setiap dugaan tersebut.

@@ -1,4 +1,3 @@
-```markdown
 # 🧪 LLM Comprehensive Evaluation Test Suite
 
 **Tujuan:** Mengukur kemampuan General Intelligence model meliputi *Coding Logic*, *Debugging*, *Reasoning*, *Instruction Following*, *System Design*, serta ketahanan terhadap *Hallucination* dan *Stress Test*.
@@ -30,8 +29,9 @@ Output: [[1,6], [8,10], [15,18]]
 
 Input: [[1,4], [4,5]]
 Output: [[1,5]]
-```
 
+
+```
 ---
 
 ## 🐞 Section 2: Debugging & Refactoring Test

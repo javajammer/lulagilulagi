@@ -1,4 +1,3 @@
-```markdown
 # 🤖 LLM Agent Capabilities Evaluation Module
 
 **Tujuan:** Mengukur kemampuan model sebagai "Agent Cerdas" yang dapat merencanakan, memperbaiki sistem kompleks, dan mengkoordinasikan resources.
@@ -59,8 +58,9 @@ def scheduler(cache_instance):
 # Inisialisasi
 cache = DataCache()
 # Anggap thread sudah dijalankan
-```
 
+
+```
 **Tugas:**
 1. Identifikasi **Bug Kritis** dalam kode di atas yang menyebabkan latency spike.
 2. Mengapa bug ini terjadi padahal sudah menggunakan `Lock`?
